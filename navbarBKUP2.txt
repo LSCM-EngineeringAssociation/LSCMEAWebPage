@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!----------------------------------------
+    ------- general information --------
+Version 1.0, As of 9:40pm
+ I intend to have the navbar and footer as small sections of code to ceopy/paste onto each webpage. After crating all the code, my goal 
+    is to make brackets around each segment so it's easy to see and copy/paste into other pages
+ Used the folowing wesite a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp
+
+
+   !!!!!!! Issues/Bugs !!!!!!!
+
+    1. The header/navbar will wrap to the second line. HOWEVER, body text positioning is absolute (XX pixels). Need to change this to make 
+        the body text positioning (from top of page) dependent on header height.
+        -OR- 
+        Just have page title on one line and navigation links on 2nd line. and maybe shrink navbar text size.
+        !! This will probably be an issue mainly in mobile devices; but at club fair everyone is using their phones to access website. :/
+        So this is a very very important issue !!
+    2. 
+    3. 
+
+----------------------------------------->
+
+<head>
+    <meta charset="utf-8">
+    <title>TESTengrC navbar and footer</title>
+
+    <style>
+
+        * { /* the asterisk denotes all text. formats all text to prevent any issues */
+            font-family: sans-serif, 'Trebuchet MS'; /* if the computer can't use Trebuchet, it will use another default sans-serif */
+            font-size: 100%; /* idk keep? */            
+        }
+
+        body { /* without, there is an ugly white margin to the left */
+            margin: 0;
+        }
+
+        ul {
+            color: white;
+            width: 100%;
+            top: 0;
+            margin: 0; /* without, there is an ugly white margin top & bottom */
+            padding: 0;
+            list-style-type: none; /* removes bullets and other formatting */
+            overflow: hidden; /* without, footer dissappears */
+        }
+
+        li { /* base for both header and footer */
+            display: block;
+            padding: 10px 10px;
+            float: right; /* while this reverses order of elements, it allows for club title to float left.*/
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #header { /*AKA navbar*/
+            background-color: black;
+            position: fixed;
+            top:0;
+        }
+
+        #textBody {
+            padding: 3%; /* arbitrary number. for compact look, choose between 2 and 5. */
+            margin-top: 30px;
+        }
+
+        #footer {
+            background-color: rgb(50,50,50); /* arbitrary color*/
+            bottom: 0; 
+            /* forces to the bottom. HOWEVER, on short pages it will not be all the way at the bottom, looking more like a colored 
+                or shaded section. I guess it could be considered a minor issue?*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--header-->
+    <div>
+        <ul id="header">
+            <li style="float:left;"><i>LSC Engineering Association</i></li> <!-- align left -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">Projects</a></li>
+            <li><a href="#contact">Members</a></li>
+            <li><a href="#about">Constitution</a></li>
+
+        </ul>
+    </div>
+
+    <!--body-->
+    <div id="textBody">
+        <p>
+            Used the following website a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp. <br><br>
+            Note: We [the website] use href="#" for test links. In a real web site this would be URLs.
+        </p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text <br></p>
+        <p>text finale!</p>
+    </div>
+
+    <!--footer-->
+    <div>
+        <ul id="footer">
+            <li style="float:left;"> <i>Social Links </i></li> <!-- align left -->
+            <li><a href="#link">platform1</a></li> <!-- because of float right, these are displayed in reverse order. -->
+            <li><a href="#news">platform2</a></li> <!-- if you want to prioritize an item, list it last. -->
+            <li><a href="#contact">platform3</a></li>
+            <li><a href="#about">platform4</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
