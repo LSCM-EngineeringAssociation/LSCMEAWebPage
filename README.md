@@ -1,3 +1,3 @@
 # LSCMEAWebPage
 
-Initial commit for the LSC-Montgomery Engineering Association
+Initial commit for the LSC-Montgomery Engineering Association Webpage
