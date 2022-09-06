@@ -1,25 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
 <!----------------------------------------
-    ------- general information --------
-Version 1.0, As of 9:40pm
+    ------- general information -------
 
- I intend to have the navbar and footer as small sections of code to ceopy/paste onto each webpage. After crating all the code, my goal 
-    is to make brackets around each segment so it's easy to see and copy/paste into other pages
- Used the folowing wesite a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp
+        Version 1.1, 9/5/2022 7:04pm
 
+    The navbar and footer are small sections of code to copy/paste onto each webpage.
+    <style> contains formatting and body has the code for navbar and footer
+    Also, I used the folowing wesite a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp
 
    !!!!!!! Issues/Bugs !!!!!!!
 
-    1. The header/navbar will wrap to the second line. HOWEVER, body text positioning is absolute (XX pixels). Need to change this to make 
-        the body text positioning (from top of page) dependent on header height.
-        -OR- 
-        Just have page title on one line and navigation links on 2nd line. and maybe shrink navbar text size.
-        !! This will probably be an issue mainly in mobile devices; but at club fair everyone is using their phones to access website. :/
-        So this is a very very important issue !!
-    2. 
-    3. 
+    1. The navbar will wrap to the second line. HOWEVER, body text positioning is
+        absolute (XX pixels). Need to change this to make the body text positioning
+        (from top of page) dependent on navbar height.
+        -OR-
+        Just have page title on one line and navigation links on 2nd line (~50px). 
+            and maybe shrink navbar text size?
+        !! This will probably be an issue mainly in mobile devices; but at club fair everyone
+        is using their phones to access website. :/ So this is a very very important issue !!
+    2.
+
+    ** Minor issues, usually ok to leave as-is **
+
+    1. Body, navbar div: There are a lot of tags on each element so it looks repetitive. But
+        when placed in the <ul>, formatting gets messed up.
+    2. Style, footer id (#footer): On short pages, footer will not be all the way at the bottom,
+        looking more like a colored or shaded section.
+
+    +++++++ Updates +++++++
+        Version 1.0 > 1.1
+
+    -Modified formatting of initial info section for improved readability; added updates section.
+    -Changed many element selectors to classes; this makes it more independent from selectors
+        ex: previously, navbar had code in <li>, which would format ALL potential lists on the
+        page, even ones we want to be "normal."
+        - li > .linkedBars_li; ul > .linkedBars_ul; a > .linkedBars_a;
+    -Changed id "header" (i.e. #header) to "navbar" for clarification and consistency.
+    -Added more comments for better description
+    -Removed some stuff
+        -ul, li a, li moved inside functions to classes
+        -li, display: block; because it didn't do anything
+
 
 ----------------------------------------->
 
@@ -28,109 +50,114 @@ Version 1.0, As of 9:40pm
     <title>TESTengrC navbar and footer</title>
 
     <style>
-
-        * { /* the asterisk denotes all text. formats all text to prevent any issues */
-            font-family: sans-serif, 'Trebuchet MS'; /* if the computer can't use Trebuchet, it will use another default sans-serif */
-            font-size: 100%; /* idk keep? */            
+        * { /* Formats all text to prevent any issues */
+            font-family: sans-serif, 'Trebuchet MS';
+            /* Sans-serif type. Arbitrary font. I just like Trebuchet but it can change*/
+            font-size: 100%; /* prevents potential issues */
         }
 
         body { /* without, there is an ugly white margin to the left */
             margin: 0;
         }
 
-        ul {
+        a { /* test, deomonstrating the independence that navbar and footer links have */
+            /* this selects all links btw */
+            color: green;
+            padding: 3px;
+            border: 3px solid rgb(50, 100, 50);
+            font-size: 15px;
+        }
+
+        /* main style for navbar and footer. Intended to copy/paste into other pages */
+        /*
+            NOTE: if there are other modifications to the text in broader selectors, make sure
+            to override them here. In CSS, there is no way to exclude elements from selectors.
+        */
+
+        .linkedBars_ul { /* place in ul elements of both navbar and footer */
             color: white;
             width: 100%;
-            top: 0;
             margin: 0; /* without, there is an ugly white margin top & bottom */
             padding: 0;
             list-style-type: none; /* removes bullets and other formatting */
             overflow: hidden; /* without, footer dissappears */
         }
 
-        li { /* base for both header and footer */
-            display: block;
+        .linkedBars_li { /* place in li elements of both navbar and footer */
             padding: 10px 10px;
-            float: right; /* while this reverses order of elements, it allows for club title to float left.*/
+            float: right;
+            /* while float right reverses element order, it allows for title to float left.*/
         }
 
-        li a {
+        .linkedBars_a {
             text-decoration: none;
             color: white;
+            /* overide a few common elements that might me applied to selector 'a' */
+            padding: 0;
+            border: none;
+            font-size: 100%;
         }
 
-        #header { /*AKA navbar*/
+        #navbar {
             background-color: black;
             position: fixed;
-            top:0;
+            top: 0;
         }
 
         #textBody {
             padding: 3%; /* arbitrary number. for compact look, choose between 2 and 5. */
-            margin-top: 30px;
+            margin-top: 30px; /* positioned below the navbar */
         }
 
         #footer {
-            background-color: rgb(50,50,50); /* arbitrary color*/
-            bottom: 0; 
-            /* forces to the bottom. HOWEVER, on short pages it will not be all the way at the bottom, looking more like a colored 
-                or shaded section. I guess it could be considered a minor issue?*/
+            background-color: rgb(50,50,50); /* arbitrary color */
+            bottom: 0;
         }
+        /*end of intended copy-paste area, from style section*/
     </style>
-
 </head>
 <body>
-
-    <!--header-->
+    <!-- navbar -->
     <div>
-        <ul id="header">
-            <li style="float:left;"><i>LSC Engineering Association</i></li> <!-- align left -->
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">Projects</a></li>
-            <li><a href="#contact">Members</a></li>
-            <li><a href="#about">Constitution</a></li>
-
+        <ul class="linkedBars_ul" id="navbar">
+            <li class="linkedBars_li" style="float:left;"><i>LSC Engineering Association</i></li> 
+            <!-- Home is currently the last element displayed, and last to be moved when window shrinks-->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Home</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Projects</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Members</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Constitution</a></li>
         </ul>
     </div>
+    <!-- End navbar -->
 
-    <!--body-->
+    <!-- body -->
     <div id="textBody">
+        <h1> normal size header </h1>
         <p>
             Used the following website a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp. <br><br>
             Note: We [the website] use href="#" for test links. In a real web site this would be URLs.
         </p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
-        <p>text <br></p>
+        <p style="text-align:center"><a href="#link"> This is a body link. The navbar and footer have their own rules</a></p>
+        <p>
+            text <br> text <br>text <br> text <br>text <br> text <br>text <br> text <br> text <br>
+            text <br> text <br>text <br> text <br>text <br> text <br> text <br> text <br>
+        </p>
         <p>text finale!</p>
     </div>
+    <!-- End body-->
 
-    <!--footer-->
+    <!-- footer -->
     <div>
-        <ul id="footer">
-            <li style="float:left;"> <i>Social Links </i></li> <!-- align left -->
-            <li><a href="#link">platform1</a></li> <!-- because of float right, these are displayed in reverse order. -->
-            <li><a href="#news">platform2</a></li> <!-- if you want to prioritize an item, list it last. -->
-            <li><a href="#contact">platform3</a></li>
-            <li><a href="#about">platform4</a></li>
+        <ul class="linkedBars_ul" id="footer">
+            <li class="linkedBars_li" style="float:left;"> <i>Social Links </i></li> <!-- align left -->
+            <!-- because of float right, these are displayed in reverse order.
+            if you want to prioritize an item, list it last. -->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform1</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform2</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform3</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform4</a></li>
         </ul>
     </div>
-
+    <!-- End footer -->
 </body>
 </html>
