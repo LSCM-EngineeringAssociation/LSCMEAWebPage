@@ -3,7 +3,7 @@
 <!----------------------------------------
     ------- general information -------
 
-        Version 1.1, 9/5/2022 7:04pm
+        Version 1.1, 9/5/2022 7:24pm
 
     The navbar and footer are small sections of code to copy/paste onto each webpage.
     <style> contains formatting and body has the code for navbar and footer
@@ -11,15 +11,7 @@
 
    !!!!!!! Issues/Bugs !!!!!!!
 
-    1. The navbar will wrap to the second line. HOWEVER, body text positioning is
-        absolute (XX pixels). Need to change this to make the body text positioning
-        (from top of page) dependent on navbar height.
-        -OR-
-        Just have page title on one line and navigation links on 2nd line (~50px). 
-            and maybe shrink navbar text size?
-        !! This will probably be an issue mainly in mobile devices; but at club fair everyone
-        is using their phones to access website. :/ So this is a very very important issue !!
-    2.
+    1.
 
     ** Minor issues, usually ok to leave as-is **
 
@@ -41,6 +33,7 @@
     -Removed some stuff
         -ul, li a, li moved inside functions to classes
         -li, display: block; because it didn't do anything
+    -Fixed navbar wrapping issue
 
 
 ----------------------------------------->
@@ -106,7 +99,7 @@
 
         #textBody {
             padding: 3%; /* arbitrary number. for compact look, choose between 2 and 5. */
-            margin-top: 30px; /* positioned below the navbar */
+            margin-top: 65px; /* positioned below the navbar */
         }
 
         #footer {
@@ -132,7 +125,7 @@
 
     <!-- body -->
     <div id="textBody">
-        <h1> normal size header </h1>
+        <h1 style="font-size:200%"> this is a BIG header! double size </h1>
         <p>
             Used the following website a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp. <br><br>
             Note: We [the website] use href="#" for test links. In a real web site this would be URLs.
