@@ -1,3 +1,4 @@
 # LSCMEAWebPage
 
-Initial commit for the LSC-Montgomery Engineering Association Webpage
+LSC-Montgomery Engineering Association Webpage code
+Work-in-progress
