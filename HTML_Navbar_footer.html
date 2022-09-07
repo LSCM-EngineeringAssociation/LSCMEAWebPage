@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<!----------------------------------------
+    ------- general information -------
+
+        Version 1.1, 9/5/2022 7:24pm
+
+    The navbar and footer are small sections of code to copy/paste onto each webpage.
+    <style> contains formatting and body has the code for navbar and footer
+    Also, I used the folowing wesite a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp
+
+   !!!!!!! Issues/Bugs !!!!!!!
+
+    1.
+
+    ** Minor issues, usually ok to leave as-is **
+
+    1. Body, navbar div: There are a lot of tags on each element so it looks repetitive. But
+        when placed in the <ul>, formatting gets messed up.
+    2. Style, footer id (#footer): On short pages, footer will not be all the way at the bottom,
+        looking more like a colored or shaded section.
+
+    +++++++ Updates +++++++
+        Version 1.0 > 1.1
+
+    -Modified formatting of initial info section for improved readability; added updates section.
+    -Changed many element selectors to classes; this makes it more independent from selectors
+        ex: previously, navbar had code in <li>, which would format ALL potential lists on the
+        page, even ones we want to be "normal."
+        - li > .linkedBars_li; ul > .linkedBars_ul; a > .linkedBars_a;
+    -Changed id "header" (i.e. #header) to "navbar" for clarification and consistency.
+    -Added more comments for better description
+    -Removed some stuff
+        -ul, li a, li moved inside functions to classes
+        -li, display: block; because it didn't do anything
+    -Fixed navbar wrapping issue
+
+
+----------------------------------------->
+
+<head>
+    <meta charset="utf-8">
+    <title>TESTengrC navbar and footer</title>
+
+    <style>
+        * { /* Formats all text to prevent any issues */
+            font-family: sans-serif, 'Trebuchet MS';
+            /* Sans-serif type. Arbitrary font. I just like Trebuchet but it can change*/
+            font-size: 100%; /* prevents potential issues */
+        }
+
+        body { /* without, there is an ugly white margin to the left */
+            margin: 0;
+        }
+
+        a { /* test, deomonstrating the independence that navbar and footer links have */
+            /* this selects all links btw */
+            color: green;
+            padding: 3px;
+            border: 3px solid rgb(50, 100, 50);
+            font-size: 15px;
+        }
+
+        /* main style for navbar and footer. Intended to copy/paste into other pages */
+        /*
+            NOTE: if there are other modifications to the text in broader selectors, make sure
+            to override them here. In CSS, there is no way to exclude elements from selectors.
+        */
+
+        .linkedBars_ul { /* place in ul elements of both navbar and footer */
+            color: white;
+            width: 100%;
+            margin: 0; /* without, there is an ugly white margin top & bottom */
+            padding: 0;
+            list-style-type: none; /* removes bullets and other formatting */
+            overflow: hidden; /* without, footer dissappears */
+        }
+
+        .linkedBars_li { /* place in li elements of both navbar and footer */
+            padding: 10px 10px;
+            float: right;
+            /* while float right reverses element order, it allows for title to float left.*/
+        }
+
+        .linkedBars_a {
+            text-decoration: none;
+            color: white;
+            /* overide a few common elements that might me applied to selector 'a' */
+            padding: 0;
+            border: none;
+            font-size: 100%;
+        }
+
+        #navbar {
+            background-color: black;
+            position: fixed;
+            top: 0;
+        }
+
+        #textBody {
+            padding: 3%; /* arbitrary number. for compact look, choose between 2 and 5. */
+            margin-top: 65px; /* positioned below the navbar */
+        }
+
+        #footer {
+            background-color: rgb(50,50,50); /* arbitrary color */
+            bottom: 0;
+        }
+        /*end of intended copy-paste area, from style section*/
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <div>
+        <ul class="linkedBars_ul" id="navbar">
+            <li class="linkedBars_li" style="float:left;"><i>LSC Engineering Association</i></li> 
+            <!-- Home is currently the last element displayed, and last to be moved when window shrinks-->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Home</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Projects</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Members</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Constitution</a></li>
+        </ul>
+    </div>
+    <!-- End navbar -->
+
+    <!-- body -->
+    <div id="textBody">
+        <h1 style="font-size:200%"> this is a BIG header! double size </h1>
+        <p>
+            Used the following website a LOT: https://www.w3schools.com/css/css_navbar_horizontal.asp. <br><br>
+            Note: We [the website] use href="#" for test links. In a real web site this would be URLs.
+        </p>
+        <p style="text-align:center"><a href="#link"> This is a body link. The navbar and footer have their own rules</a></p>
+        <p>
+            text <br> text <br>text <br> text <br>text <br> text <br>text <br> text <br> text <br>
+            text <br> text <br>text <br> text <br>text <br> text <br> text <br> text <br>
+        </p>
+        <p>text finale!</p>
+    </div>
+    <!-- End body-->
+
+    <!-- footer -->
+    <div>
+        <ul class="linkedBars_ul" id="footer">
+            <li class="linkedBars_li" style="float:left;"> <i>Social Links </i></li> <!-- align left -->
+            <!-- because of float right, these are displayed in reverse order.
+            if you want to prioritize an item, list it last. -->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform1</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform2</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform3</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform4</a></li>
+        </ul>
+    </div>
+    <!-- End footer -->
+</body>
+</html>
