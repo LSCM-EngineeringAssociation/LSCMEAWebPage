@@ -1,29 +1,128 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <style>
-      .description_projects {
-      background-color: lightyellow;
+<!DOCTYPE html>
+<html lang="en">
+<!----------------------------------------
+    ------- general information -------
 
-      }
-    </style>
+        Version 0.1, 9/6/2022 8:23pm
+
+    TESTING
+    This page contains only text for now. plans to add navbar and footer later.
+
+   !!!!!!! Issues/Bugs !!!!!!!
+
+    1.
+
+    ** Minor issues, usually ok to leave as-is **
+
+    1.
+
+    +++++++ Updates +++++++
+        Version 0.1 > ??
+
+    -
+
+----------------------------------------->
+<head>
+    <meta charset="utf-8">
     <title>Projects</title>
-  </head>
-  <body>
-    <h1>Projects</h1>
-    <h2>Robot Arm</h2>
-    <p class= "description_projects">
-      <a href="https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397"><img 
-      src="https://www.researchgate.net/profile/Minas-Liarokapis/publication/280716397/figure/fig1/AS:391744
-      672813083@1470410616590/The-robot-arms-examined-in-this-study.png" alt="The robot arms examined in this study."
-      alt="Robot arm pic"></a>
-      <!--Image from https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397/actions#embed-->
-    </p>
-    
-    <h2>Self driving car</h2>
-    <p class="description_projects"> .........</p>
-    <img src="" alt="">
-    <!--add image-->
-  </body>
+    <style>
+        * { /* Formats all text */
+            font-family: sans-serif, 'Trebuchet MS';
+            /* Sans-serif type. Arbitrary font. I just like Trebuchet but it can change*/
+        }
+
+        body { /* without, there is an ugly white margin to the left */
+            margin: 0;
+        }
+
+        div {
+            padding: 3%;
+        }
+
+        img { /* makes image SHRINK! with decreasing screen */
+            max-width:100%;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .description_projects {
+            background-color: lightgray;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .inner {
+            display: inline-block; /* side-by-side */
+        }
+    </style>
+
+</head>
+<body>
+    <!-- page title -->
+    <div>
+        <h1>Projects</h1>
+    </div>
+
+    <h1 style="width: 320px; background-color:lightblue;"> Smallest screen 320px </h1>
+
+    <!-- robot arm section -->
+
+    <div class="container">
+        <h2>Robot Arm</h2>
+        <div class="inner">
+            <p>
+                <a href="https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397">
+                    <img src="https://www.researchgate.net/profile/Minas-Liarokapis/publication/280716397/figure/fig1/AS:391744672813083@1470410616590/The-robot-arms-examined-in-this-study.png"
+                         alt="Robot arm">
+                </a>
+                <!--Image from https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397/actions#embed-->
+            </p>
+        </div>
+
+        <div class="inner">
+            <p>
+                <a href="https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397">
+                    <img src="https://www.researchgate.net/profile/Minas-Liarokapis/publication/280716397/figure/fig1/AS:391744672813083@1470410616590/The-robot-arms-examined-in-this-study.png"
+                         alt="Robot arm pic">
+                </a>
+                <!--Image from https://www.researchgate.net/figure/The-robot-arms-examined-in-this-study_fig1_280716397/actions#embed-->
+            </p>
+        </div>
+        <div class="inner">
+            <p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Red_apple.svg"
+                     alt="Apple">
+                </a>
+                <!--Image from https://en.m.wikipedia.org/wiki/File:Red_apple.svg -->
+            </p>
+        </div>
+    </div>
+    <div class="description_projects">
+        <p>
+            robot arm caption
+        </p>
+    </div class="description_projects">
+
+    <!-- self-driving car section -->
+    <div class="container">
+        <h2>Self driving car</h2>
+        <div class="inner">
+            <p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Red_apple.svg"
+                     alt="Apple">
+                </a>
+                <!--Image from https://en.m.wikipedia.org/wiki/File:Red_apple.svg -->
+            </p>
+        </div>
+    </div>
+
+    <div class="description_projects">
+        <p class="description_projects"> .........</p>    
+    </div>
+
+</body>
 </html>
