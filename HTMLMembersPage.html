@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!----------------------------------------
+    ------- general information -------
+
+        Version 1.0, 9/7/2022 9:30pm
+
+    Preliminary Members Page. No navbar links yet.
+
+   !!!!!!! Issues/Bugs !!!!!!!
+
+    1.
+
+    ** Minor issues, usually ok to leave as-is **
+
+    1. On small screens (690px), the member description section doesn't take up the full width 
+        of the screen, creating large margins. Just fine on tablets&computers though
+
+    +++++++ Updates +++++++
+        Version 1.0
+
+    -released
+
+----------------------------------------->
+<head>
+    <meta charset="utf-8">
+    <title>LSC Engineering | Members</title>
+    <style>
+        * { /* Formats all text */
+            font-family: sans-serif, 'Trebuchet MS';
+            /* Sans-serif type. Arbitrary font. I just like Trebuchet but it can change*/
+            /* border: 2px solid gray; temporary: to see how each div and element interact*/
+        }
+
+        body { /* without, there is an ugly white margin to the left */
+            margin: 0;
+        }
+
+        div {
+            padding: 3%;
+        }
+
+        img { /* makes image SHRINK! with decreasing screen */
+            max-width: 100%;
+            /* border: 3px solid lightgray; rgb(50, 100, 50) temporary: checking borders */
+        }
+
+        .description_member {
+            text-align: left;
+            background-color: lightgray;
+            width: 50%; /* This element will ALSO scale with shrinking screens. */
+        }
+
+        .container {
+            text-align: center;
+            padding: 1%;
+        }
+
+        .inner {
+            display: inline-block; /* side-by-side */
+            padding: 1%;
+        }
+
+        #page_title {
+            font-size: 300%;
+            font-weight: bold;
+        }
+
+        /* main style for navbar and footer. Intended to copy/paste into other pages */
+        /*
+            NOTE: if there are other modifications to the text in broader selectors, make sure
+            to override them here. In CSS, there is no way to exclude elements from selectors.
+        */
+
+        .linkedBars_ul { /* place in ul elements of both navbar and footer */
+            color: white;
+            width: 100%;
+            margin: 0; /* without, there is an ugly white margin top & bottom */
+            padding: 0;
+            list-style-type: none; /* removes bullets and other formatting */
+            overflow: hidden; /* without, footer dissappears */
+        }
+
+        .linkedBars_li { /* place in li elements of both navbar and footer */
+            padding: 10px 10px;
+            float: right;
+            /* while float right reverses element order, it allows for title to float left.*/
+        }
+
+        .linkedBars_a {
+            text-decoration: none;
+            color: white;
+            /* overide a few common elements that might me applied to selector 'a' */
+            padding: 0;
+            border: none;
+            font-size: 100%;
+        }
+
+        #navbar {
+            background-color: black;
+            position: fixed;
+            top: 0;
+        }
+
+        #textBody {
+            padding: 3%; /* arbitrary number. for compact look, choose between 2 and 5. */
+            margin-top: 65px; /* positioned below the navbar */
+        }
+
+        #footer {
+            background-color: rgb(50,50,50); /* arbitrary color */
+            bottom: 0;
+        }
+        /*end of intended copy-paste area, from style section*/
+    </style>
+
+</head>
+<body>
+    <!-- navbar -->
+    <div style="padding:0;">
+        <ul class="linkedBars_ul" id="navbar">
+            <li class="linkedBars_li" style="float:left;"><i>LSC Engineering Association</i></li>
+            <!-- Home is currently the last element displayed, and last to be moved when window shrinks-->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Home</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Projects</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Members</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">Constitution</a></li>
+        </ul>
+    </div>
+    <!-- End navbar -->
+
+
+    <!-- body ------------------------------------------------------------------------------------------>
+    <div id="textBody">
+    <!-- page title -->
+    <p id="page_title">Members</p>
+    <!-- Template -->
+    <div class="container">
+
+        <!-- headshot/image -->
+        <div class="inner">
+            <p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Red_apple.svg"
+                     alt="Apple">
+                <!--Image from https://en.m.wikipedia.org/wiki/File:Red_apple.svg -->
+            </p>
+        </div>
+
+        <!-- description -->
+        <div class="inner description_member">
+            <h1>Name</h1>
+            <h2>Position</h2>
+            <p>
+                Description WRaaaaaaaaaaaaap it is a wraaaaaaaaa-aaaaaaaaaaaaaap?
+                perhaaaaaaaaaa-aaaaaaaaps maybe lorem ipsum
+            </p>
+        </div>
+    </div>
+
+    <!-- Member 1 -->
+    <div class="container">
+
+        <!-- headshot/image -->
+        <div class="inner">
+            <p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Red_apple.svg"
+                     alt="Apple">
+                <!--Image from https://en.m.wikipedia.org/wiki/File:Red_apple.svg -->
+            </p>
+        </div>
+
+        <!-- description -->
+        <div class="inner description_member">
+            <h1>Apple Head</h1>
+            <h2>Member, Programmer</h2>
+            <p>
+                Hello! As computer science major, I had so much fun helping to write code for this
+                website! When not doing school, you can find me gardening, drawing, and sleeping.
+
+            </p>
+        </div>
+    </div>
+    </div>
+    <!-- End body-->
+
+
+    <!-- footer -------------------------------------------------------------------------------------->
+    <div>
+        <ul class="linkedBars_ul" id="footer">
+            <li class="linkedBars_li" style="float:left;"> <i>Social Links </i></li> <!-- align left -->
+            <!-- because of float right, these are displayed in reverse order.
+            if you want to prioritize an item, list it last. -->
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform1</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform2</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform3</a></li>
+            <li class="linkedBars_li"><a href="#link" class="linkedBars_a">platform4</a></li>
+        </ul>
+    </div>
+    <!-- End footer -->
+
+</body>
+</html>
