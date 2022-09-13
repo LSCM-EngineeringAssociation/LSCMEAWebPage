@@ -35,11 +35,14 @@ function toggleTab2() {
     if(window.scrollY == 0) {
         nav.style.transform = "translateY(-125%)";
         tb.style.transform = "translateY(0%)";
+        tb.style.boxShadow = "0px 5px 1em #000000aa";
         isUp = false;
     }
     else {
         nav.style.transform = "translateY(-250%)";
         tb.style.transform = "translateY(-100%)";
+        
+        tb.style.boxShadow = "0px 0px 0em #000000aa";
         isUp = true;
     }
 }
