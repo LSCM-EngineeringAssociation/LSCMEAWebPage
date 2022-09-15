@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 #wrapper {
-    text-align: left;
+    text-align: center;
 }
 #home-page {
     text-align: center;
@@ -24,34 +24,89 @@ a {
     text-decoration: none;
     color: inherit;
 }
+#topbreakline {
+    height: 7.5em;
+    transition: .5s;
+}
 .textbox {
     width: 100%;
     font-size: 1.5em;
     line-height: 2em;
-    text-align: left;
+    text-align: center;
     display: inline-block;
-    padding-bottom: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+.whitebg {
+    background-color: white;
+}
+.bluebg {
+    background-color: #042643;
+    color: white !important;
+}
+#projects {
+    margin: 0 auto;
+}
+#projects .tdentry {
+    margin: 2em;
+}
+.tdentry {
+    border-radius: 1em;
+    box-shadow: .25em .25em .5em #00000055;
+    transition: .25s;
+}
+.tdentry:hover {
+    border-radius: 1em;
+    box-shadow: .25em .25em 1em #00000099;
+    transition: .25s;
+}
+.tdentry p {
+    padding: .5em;
+}
+#walle {
+    background-image: url("https://i.ytimg.com/vi/FhKpGf0vdG8/maxresdefault.jpg");
+    background-size: 35vw 35vh;
+}
+#car {
+    background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
+}
+.tdimg {
+    width: 35vw;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 .divider {
     width: 10%;
     height: 5px;
     background-color: rgb(173, 21, 21);
     margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 .textbox p {
-    text-align: left;
+    text-align: center;
     margin-left: 4em;
     margin-right: 4em;
 }
-.notfirst {
-    padding-top: 2em;
+#firstsection {
+    width: 100%;
+    height: 45vh;
+    background-image: url("https://www.colorado.edu/engineering/sites/default/files/styles/slider/public/slider/cu_some_042716_0505.jpg?itok=voa1ix_a");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 h2 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 1em;
+}
+h3 {
+    font-size: 2em;
+    padding: .5em;
 }
 .author {
     color: #ffffff80 ;
@@ -91,9 +146,12 @@ h2 {
         display: inline-block;
         text-shadow: 0 0 1em rgba(255, 255, 255, 0);
         transition: .2s;
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: rgba(170, 4, 4, 0);
     }
     #lscea-li {
-        font-size: 4em !important;
+        font-size: 3em !important;
         padding-top: 0em !important;
         margin-top: 0 !important;
     }
@@ -106,10 +164,12 @@ h2 {
     }
     #nav-tab li:hover {
         transform: scale(1.2);
+        
+        text-decoration-color: rgba(170, 4, 4, 255);
     }
     #top-bar {
         width: 100%;
-        height: 10em;
+        height: 7.5em;
         background-color: #1a3859;
         transition: .5s;
         box-shadow: 0px 5px 1em #000000aa;
