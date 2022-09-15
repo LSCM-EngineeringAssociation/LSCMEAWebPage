@@ -52,13 +52,12 @@ a {
 }
 .tdentry {
     border-radius: 1em;
-    box-shadow: .25em .25em .5em #00000055;
-    transition: .25s;
+    box-shadow: 0 0 .2em #000000dd;
+    transition: .1s;
 }
 .tdentry:hover {
     border-radius: 1em;
-    box-shadow: .25em .25em 1em #00000099;
-    transition: .25s;
+    box-shadow: 0 0 .5em #00000099;
 }
 .tdentry p {
     padding: .5em;
