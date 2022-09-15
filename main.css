@@ -44,6 +44,10 @@ a {
     background-color: #042643;
     color: white !important;
 }
+#contacts {
+    background-color: #0d4170;
+    color: white !important;
+}
 #projects {
     margin: 0 auto;
 }
@@ -68,6 +72,28 @@ a {
 }
 #car {
     background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
+}
+#socials li {
+    list-style-type: none;
+    display: inline-block;
+    padding: .5em;
+}
+.socialimg {
+    box-shadow: 0 0 .35em #000000ff;
+    border-radius: 100%;
+    transition: .15s;
+}
+.socialimg:hover {
+    box-shadow: 0 0 .75em rgb(168, 168, 168);
+}
+#igimg {
+    width: 5em;
+    height: 5em;
+}
+#gitimg {
+    width: 5em;
+    height: 5em;
+    background-color: white;
 }
 .tdimg {
     width: 35vw;
@@ -100,7 +126,7 @@ a {
 }
 h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 1em;
 }
 h3 {
@@ -162,7 +188,7 @@ h3 {
         color: #ffffff;
     }
     #nav-tab li:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         
         text-decoration-color: rgba(170, 4, 4, 255);
     }
