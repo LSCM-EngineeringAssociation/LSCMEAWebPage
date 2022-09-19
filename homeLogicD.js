@@ -1,5 +1,5 @@
 function setDeviceType() {
-    if(window.screen.availWidth < 1370) {
+    if(window.screen.availWidth < 1000) {
         window.location ="homeM.html";
     }
 }

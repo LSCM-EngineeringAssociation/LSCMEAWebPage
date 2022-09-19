@@ -41,6 +41,10 @@ body {
 #home-page {
     text-align: center;
 }
+#constitution {
+    width: 85%;
+    margin-top: 5em;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -64,6 +68,31 @@ a {
 .bluebg {
     background-color: #042643;
     color: white !important;
+}
+#projects {
+    margin: 0 auto;
+}
+#projects .tdentry {
+    margin: 2em;
+}
+.tdentry {
+    border-radius: 1em;
+    box-shadow: 0 0 .2em #000000dd;
+    transition: .1s;
+}
+.tdentry:hover {
+    border-radius: 1em;
+    box-shadow: 0 0 .5em #00000099;
+}
+.tdentry p {
+    padding: .5em;
+}
+#walle {
+    background-image: url("https://i.ytimg.com/vi/FhKpGf0vdG8/maxresdefault.jpg");
+    background-size: 28em 15em;
+}
+#car {
+    background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
 }
 #contacts {
     background-color: #0d4170;
@@ -91,43 +120,13 @@ a {
     height: 10em;
     background-color: white;
 }
-#projects {
-    margin: 0 auto;
-}
-#projects .tdentry {
-    margin: 2em;
-}
-.tdentry {
-    border-radius: 1em;
-    box-shadow: 0 0 .2em #000000dd;
-    transition: .1s;
-    width: 75vw;
-}
-.tdentry:hover {
-    border-radius: 1em;
-    box-shadow: 0 0 .5em #00000099;
-}
-.tdentry p {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    margin: 0;
-}
 .tdimg {
-    width: 75vw;
-    height: 25em;
+    width: 28em;
+    height: 15em;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-}
-#walle {
-    background-image: url("https://i.ytimg.com/vi/FhKpGf0vdG8/maxresdefault.jpg");
-    background-size: 75vw 25vh;
-}
-#car {
-    background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
 }
 .divider {
     width: 10%;
@@ -144,10 +143,10 @@ a {
 }
 #firstsection {
     width: 100%;
-    height: 20em;
+    height: 45vh;
     background-image: url("https://www.colorado.edu/engineering/sites/default/files/styles/slider/public/slider/cu_some_042716_0505.jpg?itok=voa1ix_a");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: 100%;
 }
 h2 {
@@ -156,10 +155,8 @@ h2 {
     margin-bottom: 1em;
 }
 h3 {
-    font-size: 2em;
-    
-    padding-top: .5em;
-    padding-bottom: .5em;
+    font-size: 1.5em;
+    padding: .5em;
 }
 .author {
     color: #ffffff80 ;
@@ -216,6 +213,11 @@ h3 {
 }
 .font1em {
     font-size: 1.3em;
+}
+#nav-tab td:hover {
+    transform: scale(1.1);
+    
+    text-decoration-color: rgba(170, 4, 4, 255);
 }
 #top-bar {
     width: 100%;
