@@ -1,6 +1,6 @@
 function setDeviceType() {
     if(window.screen.availWidth < 1370) {
-        window.location ="membersM.html";
+        window.location ="projectsM.html";
     }
 }
 

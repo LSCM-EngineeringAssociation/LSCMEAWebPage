@@ -1,6 +1,6 @@
 function setDeviceType() {
     if(window.screen.availWidth > 1370) {
-        window.location ="homeD.html";
+        window.location ="constitutionD.html";
     }
 }
 
