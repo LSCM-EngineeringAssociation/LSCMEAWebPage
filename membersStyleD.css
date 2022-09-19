@@ -245,3 +245,41 @@ button:hover {
     text-shadow: 0 0 1em #f5e1cd;
     color: #f5e1cd
 }
+.mtable {
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: left;
+    display: inline-block;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+#memberstable {
+    margin: 0 auto;
+}
+.memberpic {
+    height: 20em;
+    width: 15em;
+}
+.memberinfo {
+    vertical-align: top;
+    text-align: left !important;
+    margin: 0 auto !important;
+    float: left;
+    width: 30em;
+}
+.tdspacer {
+    padding: 1em;
+}
+.mbutton {
+    padding: .5em;
+    border-radius: .25em;
+    box-shadow: 0 0 .2em #000000dd;
+    transition: .1s;
+}
+.mbutton:last-child {
+    margin-left: 1em;
+}
+.mbutton:hover {
+    box-shadow: 0 0 .35em #000000bb;
+}

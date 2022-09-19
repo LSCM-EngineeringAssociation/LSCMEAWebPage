@@ -1,10 +1,10 @@
 function setDeviceType() {
-    if(window.screen.availWidth < 985) {
-        window.location ="homeM.html";
+    if(window.screen.availWidth > 1370) {
+        window.location ="homeD.html";
     }
 }
 
-function toggleTab2() {
+function toggleTab() {
     let nav = document.getElementById("nav-tab");
     let tb = document.getElementById("top-bar");
     let tbl = document.getElementById("topbreakline");
@@ -25,4 +25,4 @@ function toggleTab2() {
 }
 
 window.onload = () => {setDeviceType();}
-window.addEventListener("scroll", (e) => {toggleTab2();});
+window.addEventListener("scroll", (e) => {toggleTab();});
