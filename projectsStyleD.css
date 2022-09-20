@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1730px){
+@media only screen and (max-width: 699px){
     * {
         margin: 0;
         padding: 0;
@@ -11,7 +11,7 @@
         transform: translateY(35%);
     }
 }
-@media only screen and (min-width: 1731px){
+@media only screen and (min-width: 700px){
     * {
         margin: 0;
         padding: 0;
@@ -130,9 +130,9 @@ a {
     background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
 }
 .divider {
-    width: 10%;
-    height: 5px;
-    background-color: rgb(173, 21, 21);
+    width: 90%;
+    height: 3px;
+    background-color: rgb(201, 201, 201);
     margin: 0 auto;
     margin-top: 5em;
     margin-bottom: 5em;
@@ -244,4 +244,21 @@ button:hover {
     transform: scale(1.2) translateY(-665%);
     text-shadow: 0 0 1em #f5e1cd;
     color: #f5e1cd
+}
+.proj {
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: left;
+    display: inline-block;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+.projbox {
+    margin: 4em;
+}
+h4 {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 1em;
 }

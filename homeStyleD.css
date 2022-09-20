@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1730px){
+@media only screen and (max-width: 699px){
     * {
         margin: 0;
         padding: 0;
@@ -11,7 +11,7 @@
         transform: translateY(35%);
     }
 }
-@media only screen and (min-width: 1731px){
+@media only screen and (min-width: 700px){
     * {
         margin: 0;
         padding: 0;

@@ -1,6 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
+@media only screen and (max-width: 1000px){
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+    }
+    
+    #weblogo {
+        height: 10em;
+        width: 10em;
+        transform: translateY(35%);
+    }
+}
+@media only screen and (min-width: 1001px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+        
+    #weblogo {
+        height: 5em;
+        width: 5em;
+        transform: translateY(35%);
+    }
 }
 html {
     background-color: #ffffff; 
@@ -25,7 +46,7 @@ a {
     color: inherit;
 }
 #topbreakline {
-    height: 7.5em;
+    height: 15em;
     transition: .5s;
 }
 .textbox {
@@ -48,32 +69,7 @@ a {
     background-color: #0d4170;
     color: white !important;
 }
-#projects {
-    margin: 0 auto;
-}
-#projects .tdentry {
-    margin: 2em;
-}
-.tdentry {
-    border-radius: 1em;
-    box-shadow: 0 0 .2em #000000dd;
-    transition: .1s;
-}
-.tdentry:hover {
-    border-radius: 1em;
-    box-shadow: 0 0 .5em #00000099;
-}
-.tdentry p {
-    padding: .5em;
-}
-#walle {
-    background-image: url("https://i.ytimg.com/vi/FhKpGf0vdG8/maxresdefault.jpg");
-    background-size: 28em 15em;
-}
-#car {
-    background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
-}
-#socials li {
+.socials li {
     list-style-type: none;
     display: inline-block;
     padding: .5em;
@@ -87,26 +83,56 @@ a {
     box-shadow: 0 0 .75em rgb(168, 168, 168);
 }
 #igimg {
-    width: 5em;
-    height: 5em;
+    width: 10em;
+    height: 10em;
 }
 #gitimg {
-    width: 5em;
-    height: 5em;
+    width: 10em;
+    height: 10em;
     background-color: white;
 }
+#projects {
+    margin: 0 auto;
+}
+#projects .tdentry {
+    margin: 2em;
+}
+.tdentry {
+    border-radius: 1em;
+    box-shadow: 0 0 .2em #000000dd;
+    transition: .1s;
+    width: 75vw;
+}
+.tdentry:hover {
+    border-radius: 1em;
+    box-shadow: 0 0 .5em #00000099;
+}
+.tdentry p {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin: 0;
+}
 .tdimg {
-    width: 28em;
-    height: 15em;
+    width: 75vw;
+    height: 25em;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
+#walle {
+    background-image: url("https://i.ytimg.com/vi/FhKpGf0vdG8/maxresdefault.jpg");
+    background-size: 75vw 25vh;
+}
+#car {
+    background-image: url("https://www.rainierdodgeolympia.com/assets/shared/CustomHTMLFiles/Responsive/MRP/Dodge/2019/Charger/images/2019-Dodge-Charger-01.jpg");
+}
 .divider {
-    width: 10%;
-    height: 5px;
-    background-color: rgb(173, 21, 21);
+    width: 90%;
+    height: 3px;
+    background-color: rgb(201, 201, 201);
     margin: 0 auto;
     margin-top: 5em;
     margin-bottom: 5em;
@@ -118,10 +144,10 @@ a {
 }
 #firstsection {
     width: 100%;
-    height: 45vh;
+    height: 20em;
     background-image: url("https://www.colorado.edu/engineering/sites/default/files/styles/slider/public/slider/cu_some_042716_0505.jpg?itok=voa1ix_a");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: 100%;
 }
 h2 {
@@ -131,7 +157,9 @@ h2 {
 }
 h3 {
     font-size: 2em;
-    padding: .5em;
+    
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 .author {
     color: #ffffff80 ;
@@ -162,111 +190,73 @@ h3 {
     text-align: center;
     width: 100%;
 }
-@media only screen and (min-width: 1380px){
-    #nav-tab li {
-        font-size: 2em;
-        list-style: none;
-        padding-left: 5%;
-        padding-right: 5%;
-        display: inline-block;
-        text-shadow: 0 0 1em rgba(255, 255, 255, 0);
-        transition: .2s;
-        text-decoration: underline;
-        text-decoration-style: double;
-        text-decoration-color: rgba(170, 4, 4, 0);
-    }
-    #lscea-li {
-        font-size: 3em !important;
-        padding-top: 0em !important;
-        margin-top: 0 !important;
-    }
-    #nav-tab {
-        text-align: center;
-        box-sizing: border-box;
-        transform: translateY(-125%);
-        transition: .5s;
-        color: #ffffff;
-    }
-    #nav-tab li:hover {
-        transform: scale(1.1);
-        
-        text-decoration-color: rgba(170, 4, 4, 255);
-    }
-    #top-bar {
-        width: 100%;
-        height: 7.5em;
-        background-color: #1a3859;
-        transition: .5s;
-        box-shadow: 0px 5px 1em #000000aa;
-    }
-    button {
-        float: right;
-        transform: translateY(-800%);
-        margin: .5em;
-        font-size: 1.5em;
-        color: #deb992;
-        background-color: #00000000;
-        border-color: #00000000;
-        white-space: nowrap;
-        transition: .25s;
-    }
-    button:hover {
-        transform: scale(1.2) translateY(-665%);
-        text-shadow: 0 0 1em #f5e1cd;
-        color: #f5e1cd
-    }
+#nav-tab td {
+    font-size: 2em;
+    list-style: none;
+    display: inline-block;
+    text-shadow: 0 0 1em rgba(255, 255, 255, 0);
+    transition: .2s;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: rgba(170, 4, 4, 0);
 }
-@media screen and (max-width: 1380px) {
-    #nav-tab li {
-        font-size: 2em;
-        list-style: none;
-        padding-left: 5%;
-        padding-right: 5%;
-        display: inline-block;
-        text-shadow: 0 0 1em rgba(255, 255, 255, 0);
-        transition: .2s;
-        text-decoration: underline;
-        text-decoration-style: double;
-        text-decoration-color: rgba(170, 4, 4, 0);
-    }
-    #lscea-li {
-        font-size: 3em !important;
-        padding-top: 0em !important;
-        margin-top: 0 !important;
-    }
-    #nav-tab {
-        text-align: center;
-        box-sizing: border-box;
-        transform: translateY(-125%);
-        transition: .5s;
-        color: #ffffff;
-    }
-    #nav-tab li:hover {
-        transform: scale(1.1);
-        
-        text-decoration-color: rgba(170, 4, 4, 255);
-    }
-    #top-bar {
-        width: 100%;
-        height: 7.5em;
-        background-color: #1a3859;
-        transition: .5s;
-        box-shadow: 0px 5px 1em #000000aa;
-    }
-    button {
-        float: right;
-        transform: translateY(-800%);
-        margin: .5em;
-        font-size: 1.5em;
-        color: #deb992;
-        background-color: #00000000;
-        border-color: #00000000;
-        white-space: nowrap;
-        transition: .25s;
-    }
-    button:hover {
-        transform: scale(1.2) translateY(-665%);
-        text-shadow: 0 0 1em #f5e1cd;
-        color: #f5e1cd
-    }
+#nav-tab {
+    width: 100%;
+    text-align: center;
+    transform: translateY(-75%);
+    transition: .5s;
+    color: #ffffff;
+}
+#nav-tab table {
+    margin: 0 auto;
+}
+#nav-tab td {
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+.font1em {
+    font-size: 1.3em;
+}
+#top-bar {
+    width: 100%;
+    height: 15em;
+    background-color: #1a3859;
+    transition: .5s;
+    box-shadow: 0px 5px 1em #000000aa;
+}
+button {
+    float: right;
+    transform: translateY(-800%);
+    margin: .5em;
+    font-size: 1.5em;
+    color: #deb992;
+    background-color: #00000000;
+    border-color: #00000000;
+    white-space: nowrap;
+    transition: .25s;
+}
+button:hover {
+    transform: scale(1.2) translateY(-665%);
+    text-shadow: 0 0 1em #f5e1cd;
+    color: #f5e1cd
+}
+.proj {
+    width: 100%;
+    font-size: 2em;
+    line-height: 2em;
+    text-align: left;
+    display: inline-block;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+.projbox {
+    margin: 4em;
+}
+.projbox p {
+    font-size: 3em;
+}
+h4 {
+    font-size: 5em;
+    text-align: left;
+    margin-bottom: 1em;
 }
