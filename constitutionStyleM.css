@@ -193,9 +193,6 @@ h3 {
     display: inline-block;
     text-shadow: 0 0 1em rgba(255, 255, 255, 0);
     transition: .2s;
-    text-decoration: underline;
-    text-decoration-style: double;
-    text-decoration-color: rgba(170, 4, 4, 0);
 }
 #nav-tab {
     width: 100%;
