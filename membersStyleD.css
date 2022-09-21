@@ -23,6 +23,9 @@
         transform: translateY(35%);
     }
 }
+#weblogo {
+    border: white 5px;
+}
 html {
     background-color: #ffffff; 
     color: #000000;
