@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    position: relative;
+    background-color: #003300;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'VT323';
+}
+#title {
+    text-align: center;
+    padding: .5em;
+    font-size: 5em;
+    color: greenyellow;
+}
+#subtitle {
+    text-align: center;
+    font-size: 4em;
+    color: greenyellow;
+}
+#author {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1.5em;
+    color: greenyellow;
+}
+#content {
+    text-align: center;
+    padding: 4em;
+}
+#scanlines, #bezel {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+#scanlines {
+    opacity: 50%;
+}
+li {
+    list-style: none;
+}
+a {
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 2em;
+}
+.glow {
+    -webkit-animation: 0.01s linear 0s infinite alternate running glow;
+    -moz-animation: 0.01s linear 0s infinite alternate running glow;
+    animation: .15s linear 0s infinite alternate running glow;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 5px 4px #b6d83c55, -1.25px -1.5px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+    25% {
+        text-shadow: -5px -6px #b6d83c55, 1.25px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    50% {
+        text-shadow: 5px -4px #b6d83c55, -2px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.616), 0 0 .3em rgba(172, 255, 47, 0.616), 0 0 .5em rgba(172, 255, 47, 0.616);
+    }
+    75% {
+        text-shadow: -8px -4px #b6d83c55, -1.25px -1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    100% {
+        text-shadow: -5px 0 #b6d83c55, 1.25px -1px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+}
+@-webkit-keyframes glow {
+    0% {
+        text-shadow: 5px 4px #b6d83c55, -1.25px -1.5px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+    25% {
+        text-shadow: -5px -6px #b6d83c55, 1.25px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    50% {
+        text-shadow: 5px -4px #b6d83c55, -2px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.616), 0 0 .3em rgba(172, 255, 47, 0.616), 0 0 .5em rgba(172, 255, 47, 0.616);
+    }
+    75% {
+        text-shadow: -8px -4px #b6d83c55, -1.25px -1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    100% {
+        text-shadow: -5px 0 #b6d83c55, 1.25px -1px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+}
+@-moz-keyframes glow {
+    0% {
+        text-shadow: 5px 4px #b6d83c55, -1.25px -1.5px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+    25% {
+        text-shadow: -5px -6px #b6d83c55, 1.25px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    50% {
+        text-shadow: 5px -4px #b6d83c55, -2px 1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.616), 0 0 .3em rgba(172, 255, 47, 0.616), 0 0 .5em rgba(172, 255, 47, 0.616);
+    }
+    75% {
+        text-shadow: -8px -4px #b6d83c55, -1.25px -1px #1fc58555, 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+    100% {
+        text-shadow: -5px 0 #b6d83c55, 1.25px -1px #1fc58555, 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+}
